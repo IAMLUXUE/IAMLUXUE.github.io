@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相册</title>
+    <!-- 公共CSS代码 -->
+    <link rel="stylesheet" href="./css/body.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <!-- CSS代码 -->
+    <link rel="stylesheet" href="./css/album.css">
+    <link rel="stylesheet" href="./css/history.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="homenav">
+        <div class="navtitle"><strong>LXT</strong></div>
+        <a href="home.html">家</a>
+        <a href="about.html">关于</a>
+        <a href="blog.html">博客</a>
+        <a href="album.html">相册</a>
+        <a href="join.html">加入</a>
+        <a href="fav.html">喜欢</a>
+        <div class="navanim album"></div>
+        <div class="none"></div>
+    </nav>
+    <!-- 主体内容 -->
+    <div class="mid">
+        <ul id="banner" class="banner"></ul>
+    </div>
+    <!-- 时间轴 -->
+    <div id="page" class="site">
+        <div id="content" class="site-content">
+            <div class="content-block history">
+                <div class="content-wrap small-wrap vert-spaced lined">
+                    <div class="columns">
+                        <div class="col third middled copy-col onScrollEnter">
+                            <h4 class="chapter-headline">草神</h4>
+                            <p class="chapter-copy s-text top-spaced">纳西妲，米哈游出品的游戏《原神》及其衍生作品中的角色，真名布耶尔，“尘世七执政”中的草神，被须弥人给予“小吉祥草王”的爱称 。现今七神中最年轻的一位，自诞生起已五百年 。倾听与观察是纳西妲了解这个世界的重要途径 。或许是因为久居净善宫，纳西妲对世间万物都有着旺盛的好奇心</p>
+                        </div>
+                        <!-- .col -->
+                        <div class="col two-thirds middled ui-col rel onScrollEnter">
+                            <div class="chapter-image img imgfill" style="background-image:url('img/home4.jpg');"></div>
+                            <div class="timeline-container circle-timelines">
+                                <div class="fill-parent ui-timelines">
+                                    <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 600 600"
+                                        style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                                        <circle fill="none" stroke="#000000" stroke-miterlimit="10" cx="300" cy="300"
+                                            r="300" />
+                                    </svg>
+                                    <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 600 600"
+                                        style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                                        <circle fill="none" stroke="#000000" stroke-miterlimit="10" cx="300" cy="300"
+                                            r="300" />
+                                    </svg>
+                                </div>
+                                <!-- .ui-timelines -->
+                                <div class="ui-chapters fill-parent">
+                                    <div class="ui-chapter current-chapter"> <span class="chapter-point">55</span> <span
+                                            class="chapter-label"></span> </div>
+                                    <div class="ui-chapter"> <span class="chapter-point"></span> <span
+                                            class="chapter-label"></span> </div>
+                                    <div class="ui-chapter"> <span class="chapter-point"></span> <span
+                                            class="chapter-label"></span> </div>
+                                    <div class="ui-chapter"> <span class="chapter-point"></span> <span
+                                            class="chapter-label"></span> </div>
+                                    <div class="ui-chapter"> <span class="chapter-point"></span> <span
+                                            class="chapter-label"></span> </div>
+                                    <div class="ui-chapter"> <span class="chapter-point"></span> <span
+                                            class="chapter-label"></span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="foot">
+        <p>@2023-202X</p>
+        <p>GOOD GOOD STUDY DAY DAY UP</p>
+    </footer>
+    <!-- 轮播图 -->
+    <script src="./js/album.js"></script>
+    <!-- 时间轴js -->
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script type='text/javascript'
+        src='https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/lodash.js/4.17.21/lodash.min.js'></script>
+    <script type='text/javascript' src='./js/timeline/TweenMax.min.js'></script>
+    <script type='text/javascript' src='./js/timeline/DrawSVGPlugin.js'></script>
+    <script type='text/javascript' src='./js/timeline/namespaces.js'></script>
+    <script type="text/javascript">
+        function preload_images(images, functions) {
+            if (typeof functions === 'undefined') functions = {};
+            var loaded = 0;
+            for (var i = 0; i < images.length; i++) {
+                ////console.log('preload '+images[i]);
+                var img = new Image();
+                img.onload = img.onerror = function () {
+                    ////console.log(img.src + ' loaded');
+                    var onImgParams = {
+                        //img : img,
+                        //index : i,
+                        loadedPct: (loaded / images.length)
+                    };
+                    if (_.isFunction(functions.onImgLoad)) functions.onImgLoad(onImgParams);
+
+                    loaded++;
+                    if (loaded >= images.length && _.isFunction(functions.onAllImgsLoaded)) {
+                        ////console.log('all imgs loaded');
+                        functions.onAllImgsLoaded()
+                    }
+                };
+                img.src = images[i];
+            }// endfor
+        }// preload_images()
+    </script>
+    <script type='text/javascript' src='./js/timeline/history.js'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+
+
+        var _history_data = [
+            { "title": "草神", "copy": "纳西妲，米哈游出品的游戏《原神》及其衍生作品中的角色，真名布耶尔，“尘世七执政”中的草神，被须弥人给予“小吉祥草王”的爱称 。现今七神中最年轻的一位，自诞生起已五百年 。倾听与观察是纳西妲了解这个世界的重要途径 。或许是因为久居净善宫，纳西妲对世间万物都有着旺盛的好奇心", "img": { "src": "img\/home4.jpg" } },
+            { "title": "水神", "copy": "芙宁娜，米哈游出品的游戏《原神》及其衍生作品中的角色，魔神名芙卡洛斯，“尘世七执政”中的末任水神，众水、众方、众民与众律法的女王，曾经统治着水之国枫丹 ，深受民众喜爱 。芙卡洛斯为应对继承自前代水神厄歌莉娅的预言危机，将自己的神格和人格分离开来。作为神格的芙卡洛斯躲在谕示机里积蓄日后执行水神审判所需的律偿混能，作为人格的芙宁娜·德·枫丹负责继续在水神的位置上欺骗天理", "img": { "src": "img\/home5.jpg" } },
+            { "title": "龙王", "copy": "龙王是古代神话传说中在水里统领水族的王，掌管兴云降雨。传说龙能行云布雨、消灾降福，象征祥瑞，所以以舞龙的方式来祈求平安和丰收就成为全国民间各地的一种习俗。", "img": { "src": "img\/home6.jpg" } },
+            { "title": "凝光", "copy": "凝光，米哈游出品的游戏《原神》及其衍生作品中的角色，坐拥空中宫殿，有着大量传言的璃月权贵，脸上总是挂着优雅神秘的笑容。作为“璃月七星”中的天权星，她不仅象征着权力与律法，也代表着财富与才智 [1]。其名下财富之多，全大陆鲜有人能望其项背 [8]", "img": { "src": "img\/home7.jpg" } },
+            { "title": "妮露", "copy": "妮露，米哈游出品的游戏《原神》及其衍生作品中的角色，“祖拜尔剧场”的明星演员，舞姿娉婷，如睡莲初绽，一尘不染。但她绝非高傲清冷之人，即便只是匆匆的旅者，也会对她纯洁质朴的笑容过目不忘", "img": { "src": "img\/about2.jpg" } },
+            { "title": "派蒙", "copy": "游戏《原神》及其衍生作品中的看板娘，玩家的向导。在游戏中，旅行者钓上了溺水的派蒙（在魔神任务第四章第一幕一开始的闲聊中，派蒙透露是在累得不行的时候刚好被莫名其妙的漩涡卷进海里），并将自身遭遇告诉派蒙。她自愿担任向导，陪同旅行者在提瓦特大陆寻找家人 [1] [6]。在游戏剧情中是代替主人公说话的特殊第一人称设定。", "img": { "src": "img\/about3.jpg" } }];
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='./js/timeline/page_about.js'></script>
+</body>
+
+</html>

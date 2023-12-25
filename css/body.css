@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/home1.jpg");
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	/* 左右两侧溢出隐藏 */
+    overflow-x: hidden;
+    min-height: 100%;
+}
+
+/* 底部 */
+.foot{
+    margin-top: 0px;
+    width: 100vw;
+    height: 50px;
+    float: left;
+    clear: both;
+    text-align: center;
+    margin-bottom: 0px;
+    background-color: rgb(0, 0, 0);
+}
+.foot p{
+    margin: 2px 3px;
+    color: rgb(255, 255, 255);	
+}

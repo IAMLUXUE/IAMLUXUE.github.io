@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fav</title>
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/body.css">
+    <!-- CSS样式 -->
+    <link rel="stylesheet" href="css/fav.css">
+    <!-- 点击小说弹出样式 -->
+    <link rel="stylesheet" href="css/booktc.css">
+    <script src="js/booktc.js"></script>
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="css/APlayer.min.css">
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"> -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script> -->
+    <script src="js/APlayer.min.js"></script>
+	<!-- require MetingJS -->
+    <script src="js/Meting.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> -->
+
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="homenav">
+        <div class="navtitle"><strong>LXT</strong></div>
+        <a href="home.html">家</a>
+        <a href="about.html">关于</a>
+        <a href="blog.html">博客</a>
+        <a href="album.html">相册</a>
+        <a href="join.html">加入</a>
+        <a href="fav.html">喜欢</a>
+        <div class="navanim home"></div>
+        <div class="none"></div>
+    </nav>
+    <div class="fav">
+        <!-- 音乐 -->
+        <div class="music">
+            <meting-js server="netease" type="playlist" id="2281694777" order="random" preload="auto" mini="true" fixed="true"></meting-js>
+            <!-- 2281694777    7726237700 -->
+        </div>
+       <!-- 图书 -->
+        <div class="book">
+            <div style="width: 900px;" >
+                <div class="picture">
+                    <img src="img/fav9.jpg">
+                    <p style="text-align:center;">灵境行者</p>
+                </div>
+    
+                <div class="picture">
+                    <img src="img/fav.jpg">
+                    <p style="text-align:center;">赤心巡天</p>
+              
+                </div>
+    
+                <div class="picture">
+                    <img src="img/fav1.jpg"> 
+                    <p style="text-align:center;">宿命之环</p>
+            
+                </div>
+    
+                <div class="picture">
+                    <img src="img/fav2.jpg">
+                    <p style="text-align:center;">晋末长剑</p>
+       
+                </div>
+    
+                <div class="picture">
+                    <img src="img/fav3.jpg">
+                    <p style="text-align:center;">从水猴子开始成神</p>
+           
+                </div>
+    
+                <div class="picture">
+                    <img src="img/fav4.jpg" >
+                    <p class="novel-title" onClick="showNovelContent('picture')" style="text-align: center;">箱子里的大明<p>
+           
+                </div>
+    
+                <div class="picture">
+                    <img src="img/fav5.jpg">
+                    <p style="text-align:center;">说好制作烂游戏</p>
+          
+                </div>
+    
+                <div class="picture">
+                    <img src="img/fav6.jpg">
+                    <p style="text-align:center;">重启神话</p>
+              
+                </div>
+    
+                <div class="picture">
+                    <img src="img/fav7.jpg">
+                    <p style="text-align:center;">重生在火红年代</p>
+                
+                </div>
+                
+                <div class="picture">
+                    <img src="img/fav8.jpg">
+                    <p style="text-align:center;">仙人消失之后</p>
+                </div>
+
+                <div class="picture">
+                    <img src="img/fav9.jpg">
+                    <p style="text-align:center;">我的诡异人生</p>
+          
+                </div>
+    
+                <div class="picture">
+                    <img src="img/fav10.jpg">
+                    <p style="text-align:center;">红楼之挽天倾</p>
+              
+                </div>
+    
+                <div class="picture">
+                    <img src="img/fav11.jpg">
+                    <p style="text-align:center;">我的模拟长生路</p>
+                
+                </div>
+                
+                <div class="picture">
+                    <img src="img/fav12.jpg">
+                    <p style="text-align:center;">我是导演，我不比烂</p>
+                </div>
+
+                <div class="picture">
+                    <img src="img/fav13.jpg">
+                    <p style="text-align:center;">天人图谱</p>
+                </div>
+            </div>
+
+        </div>
+    
+    </div>
+    
+    <div id="novelModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">close</span>
+          <p id="novelContent"></p>
+        </div>
+      </div>
+
+
+</body>
+
+
+</html>

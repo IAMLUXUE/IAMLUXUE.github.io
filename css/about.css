@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "AlimamaDongFangDaKai-Regular";
+    src: url("../font/AlimamaDongFangDaKai-Regular.ttf");
+}
+*{
+    font-family: "AlimamaDongFangDaKai-Regular";
+}
+/* 主体内容 */
+.mid{
+    height: 180vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+/* 主体头部的图片 */
+.headimg{
+    top: 0px;
+    height: 250px;
+    width: 100%;
+    background-image: url("../img/about1.jpg");
+    background-repeat: no-repeat;
+    /* overflow: hidden; */
+    border-bottom: 5px solid rgb(58, 83, 85);
+    animation: headload 0.9s linear;
+}
+
+@keyframes headload{
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 240px;
+    }
+}
+/* 主体头部的标题 */
+.headimg h1{
+    color: rgb(255, 255, 255);
+    font-size: 5em;
+    text-align: center;
+    line-height: 200px;
+	/* 文字边框 */
+	-webkit-text-stroke: 1px black;
+}
+/* 主体下半部分的窗口 */
+.mid .ab{
+    width: 800px;
+    height: 300px;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    background: rgba(59, 154, 231, 0.601);
+    border-radius: 15px;
+    /* backdrop-filter: blur(5px); */
+    display: flex;
+    overflow: hidden;
+    margin-top: 40px;
+}
+/* 主体下半部分窗口的图片 */
+.a1 .img{
+    background-image: url("../img/about2.jpg");
+}
+.a2 .img{
+    background-image: url("../img/about3.jpg");
+}
+.a3 .img{
+    background-image: url("../img/about4.jpg");
+}
+/* 主体下半部分窗口的段落 */
+.ab p{
+    word-wrap: break-word;
+    color: rgba(0, 0, 0, 0.413);
+    line-height: 24px;
+    font-size: 20px;
+}
+
+.ab .txt{
+    width: 400px;
+    margin: 0 50px 0 50px;
+}
+.ab h2{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+/* 主体下半部分的图片样式 */
+.ab .img{
+    width: 300px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(0.3);
+    opacity: 0.8;
+    transition: all 0.5s ease 0s;
+}
+.ab .img:hover{
+    transform: scale(1.1);
+}
+.ab .imghid{
+    overflow: hidden;
+}
+/* 主体下半部分的过渡和动画效果 */
+.a1{
+    margin-left: 40%;
+    animation: a1load 2.5s linear;
+    transition: 0.5s  1s;
+}
+.a2{
+    margin-left: 10%;
+    animation: a2load 3.6s linear;
+    transition: 0.5s;
+}
+.a3{
+    margin-left: 40%;
+    animation: a3load 4.8s linear;
+    transition: 0.5s;
+}
+
+
+/* 动画关键帧 */
+@keyframes a1load{
+    0%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 40px;
+    }
+}
+@keyframes a2load{
+    0%{
+        
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes a3load{
+    0%{
+        
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* 最后一个框的文本 */
+.a3 h2{
+    margin-top: 100px;
+    line-height: 50px;
+}

@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* vh和vw是视口单位 自动调整尺寸*/
+    height: 100vh;
+    width: 100vw;
+    color: rgb(232, 191, 206);
+    overflow: hidden;
+}
+
+
+/* 背景 */
+.back {
+    display: flex;
+    /* 上下左右居中 */
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100%;
+    background-size: cover;
+    background-image: url("../img/login.png");
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    /* 缩放变换 将元素放大1.05倍。*/
+    transform: scale(1.05);
+}
+
+
+/*  失去聚焦的时候使用毛玻璃效果 */
+.back::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    /* 毛玻璃效果 */
+    backdrop-filter: blur(10px);
+    position: fixed;
+}
+
+
+/* 当具有.back类的元素被鼠标悬停时，对其伪元素::before取消毛玻璃效果。 恢复聚焦的时候*/
+.back:hover::before {
+    backdrop-filter: none;
+}
+
+
+
+/* 登录框 */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 500px;
+    min-height: 300px;
+    background-color: rgba(241, 241, 241, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(194, 232, 88, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+/* 注册 */
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 500px;
+    min-height: 300px;
+    background-color: rgba(241, 241, 241, 0.7);
+    /* overflow: hidden; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(194, 232, 88, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+/* LOGIN字 */
+.logtitle {
+    font-size: 40px;
+    font-weight: bolder;
+    /* 将背景应用到文本上 */
+    -webkit-background-clip: text;
+    /* linear-gradient()创建一个表示两种或多种颜色线性渐变的图片 */
+    background-image: linear-gradient(90deg, rgba(237, 248, 27, 0.6), rgba(183, 255, 188, 0.6), rgba(247, 163, 44, 0.6), rgba(241, 93, 241, 0.6), rgba(66, 55, 226, 0.6), rgba(248, 31, 107, 0.6));
+    background-size: 800%;
+    /* 一个名为"gradient"的动画效果，持续时间为30秒，效果为无限循环的线性过渡。 */
+    animation: gradient 30s infinite linear;
+    /* 文字颜色设置为透明  */
+    color: transparent;
+    line-height: 100px;
+}
+
+/* LOGIN动画 渐变关键帧 */
+@keyframes gradient {
+    100% {
+        background-position: -800% 0%;
+    }
+}
+
+
+/* REG字 */
+.regtitle {
+    font-size: 40px;
+    font-weight: bolder;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(90deg, rgba(237, 248, 27, 0.6), rgba(183, 255, 188, 0.6), rgba(247, 163, 44, 0.6), rgba(241, 93, 241, 0.6), rgba(66, 55, 226, 0.6), rgba(248, 31, 107, 0.6));
+    background-size: 800%;
+    animation: gradient 30s infinite linear;
+    color: transparent;
+    line-height: 100px;
+}
+
+
+/* 表单里的输入框样式 */
+.logbody .txt {
+    border: none;
+    border-bottom: 1px solid rgba(18, 21, 32, 0.7);
+    background: transparent;
+    /* 为元素的所有属性添加一个持续时间为 0.3 秒的过渡效果 */
+    transition: 0.3s;
+    height: 30px;
+    padding-top: 10px;
+}
+
+
+.regbody .txt {
+    border: none;
+    border-bottom: 1px solid rgba(18, 21, 32, 0.7);
+    background: transparent;
+    /* 为元素的所有属性添加一个持续时间为 0.3 秒的过渡效果 */
+    transition: 0.3s;
+    height: 30px;
+    padding-top: 10px;
+}
+
+/* 账户密码聚焦的时候 */
+.logbody .txt:hover {
+    transform: scaleX(1.1);
+}
+
+
+.regbody .txt:hover {
+    transform: scaleX(1.1);
+
+}
+
+/* 账户密码点击 */
+.logbody .txt:focus {
+    /* 移除浏览器的默认聚焦样式 */
+    outline: none;
+    border-bottom: 1px solid rgba(59, 245, 183, 0.7);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.regbody .txt:focus {
+    outline: none;
+    border-bottom: 1px solid rgba(59, 245, 183, 0.7);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* 登录按钮 */
+.logbody .sub {
+    width: 80%;
+    height: 45px;
+    margin-top: 10%;
+    margin-left: 10%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(220, 185, 223, 0.8);
+    font-size: 16px;
+    color: rgb(25, 54, 57, 0.8);
+}
+
+/* 注册按钮 */
+.regbody .sub {
+    width: 80%;
+    height: 45px;
+    margin-top: 10%;
+    margin-left: 10%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(220, 185, 223, 0.8);
+    font-size: 16px;
+    color: rgb(25, 54, 57, 0.8);
+}
+
+/* 登录按钮悬停的颜色 */
+.logbody .sub:hover {
+    background-color: rgba(255, 153, 177, 0.8);
+    box-shadow: 0 0 10px rgba(118, 155, 202, 0.8);
+}
+
+.regbody .sub:hover {
+    background-color: rgba(255, 153, 177, 0.8);
+    box-shadow: 0 0 10px rgba(118, 155, 202, 0.8);
+}
+
+/* 注册 */
+.zc {
+    margin-top: 20px;
+    margin-left: 70%;
+    border: none;
+    /* 设置了背景颜色为透明。 */
+    background-color: transparent;
+}
+
+/* 注册 */
+.zc:hover {
+    color: rgb(34, 222, 78);
+}
+

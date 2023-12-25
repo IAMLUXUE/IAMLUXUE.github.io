@@ -1,0 +1,60 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+.fav{
+    width: 100vw;
+    height: 100vh;
+}
+span{
+    color: rgb(62,125,171);
+}
+img{
+    height: 200px;
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* margin: 10 auto; */
+    /* transition: transform 0.3s ease; */
+}
+p{
+    color: rgb(0, 0, 0);
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+p:hover{
+    color: gray;
+}
+.picture{
+    /* width: 160px; */
+    display: inline-block;	
+    box-shadow: 5px 5px 8px rgba(190, 190, 190, .4);
+    /* 过渡动画效果 */
+    transition: all 0.6s;
+}
+
+
+.picture:hover{
+    box-shadow: 5px 5px 8px rgb(190, 190, 190);
+    /* 盒子向上移动效果*/
+    transform: translateY(-.9rem);
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: 1s;
+    
+}
+
+
+
+h2,h3{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.book{
+    margin-top: 100px;
+}
+

@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "AlimamaDongFangDaKai-Regular";
+    src: url("../font/AlimamaDongFangDaKai-Regular.ttf");
+}
+*{
+    font-family: "AlimamaDongFangDaKai-Regular";
+}
+/* 内外边距清除 */
+body{
+    margin: 0;
+    padding: 0;
+}
+ /* flex 布局*/
+nav{
+    position: fixed;
+    display: flex;
+    /* 等分每个内部盒子的间距 */
+    justify-content: space-around;
+    /* 居中对齐 */
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    top: 0px;
+    background-color: #CCCCCC;
+    overflow: hidden;
+    font-size: 25px;
+    color: #FF6666;
+    /* 透明度 */
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* 导航栏的动画效果 */
+/* .homenav{
+    animation: load2 1s linear;
+}
+
+@keyframes load2{
+    0%{
+        top: -80px;
+        opacity: 0;
+    }100%{
+        top: 0px;
+        opacity: 1;
+    }
+} */
+
+
+/* 鼠标悬停在 nav 元素上时，它的不透明度将变为 0.95。 */
+nav:hover{
+    opacity: 1;
+}
+nav .navtitle{
+    padding-left: 50px;
+    width: 10%;
+}
+nav .navtitle strong{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+/* 导航栏样式和效果 */
+nav a{
+   /* display: block; */
+   justify-content: center;
+   text-decoration: none;
+   line-height: 70px;
+   /* width: 120px; */
+   text-align: center;
+   font-weight: bolder;
+   color: rgb(84, 109, 158);
+   transition: 0.5s;
+}
+
+nav a:hover{
+    border-bottom:10px rgb(160, 240, 11)  solid;
+
+}

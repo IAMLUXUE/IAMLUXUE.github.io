@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>login</title>
+	<!-- 登录css代码 -->
+	<link rel="stylesheet" href="./css/login.css">
+
+</head>
+
+<body>
+	<!-- 背景 -->
+	<div class="back" id="back">
+		<!-- 登录框 -->
+		<div class="login" id="login">
+			<!-- LOGIN字 -->
+			<div class="logtitle">LOGIN</div>
+			<!-- 用于登录的表单 -->
+			<form action="home.html" id="logbody" class="logbody" onsubmit="return login()">
+				<span style="color: black;">账号：</span><input type="text" id="account" size="20" class="txt"
+					placeholder="请输入账户">
+				<br>
+				<span style="color: black;">密码：</span><input type="password" id="password" size="20" class="txt"
+					placeholder="请输入密码">
+				<br>
+				<input type="submit" value="登录" id="sub" class="sub">
+			</form>
+			<!-- 注册 -->
+			<a href="register.html"><input type="button" value="注册" id="zc" class="zc"></a>
+		</div>
+	</div>
+	
+	
+
+	<!-- 登录验证的js -->
+	<script src="./js/login.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
